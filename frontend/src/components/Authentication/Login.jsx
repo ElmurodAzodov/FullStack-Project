@@ -1,5 +1,7 @@
 import Eye from "../../assets/icons/Eye.png";
 import { useState } from "react";
+import { axiosCall, acccessTokenIsValid, refreshTokenLS, accessTokenIsValid } from "../../conf/axios.js";
+import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY } from "../../conf/common.js";
 
 function Login(props) {
     const [showPassword, setShowPassword] = useState(false);
@@ -10,19 +12,40 @@ function Login(props) {
     const submit = async e => {
         e.preventDefault();
         const user = {
-            username: username,
-            password: password
-        };
+            'username': username,
+            'password': password,
+        }
+        const response = await axiosCall('api/token/create/', 
+                                            user, null, "POST")
+        localStorage.setItem(ACCESS_TOKEN_KEY, data.access)
+        localStorage.setItem(REFRESH_TOKEN_KEY, data.refresh)
     };
 
+    function fireSetUsername(e) { setUsername(e.target.value) }
+    function fireSetPassword(e) { setPassword(e.target.value) }
+
+
+
+    
     return (
         <div>
-            <div className="form-group">
+            <form className="form-group" onSubmit={submit}>
                 <div>
-                    <input type="text" id="name-input" placeholder="Никнейм или электронная почта" />
+                    <input
+                        type="text"
+                        id="login-name-input"
+                        onChange={fireSetUsername}
+                        placeholder="Никнейм или электронная почта"
+                    />
                 </div>
                 <div>
-                    <input type={showPassword ? "text" : "password"} id="pass-input" placeholder="Пароль" />
+                    <input
+                        type={showPassword ? "text" : "password"}
+                        id="login-pass-input"
+                        onChange={fireSetPassword}
+                        className="pass-input"
+                        placeholder="Пароль"
+                    />
                     <img src={Eye} onClick={() => { setShowPassword(!showPassword) }} alt="" />
                 </div>
                 <p className='помошник'>
@@ -30,7 +53,7 @@ function Login(props) {
                     <a className='восстановить' href='#'>Восстановить</a>
                 </p>
                 <button className='войти'>Войти</button>
-            </div>
+            </form>
         </div>
     );
 }
