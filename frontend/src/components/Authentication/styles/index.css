@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 #authentication-section {
-    background: url(../../../assets/imgs/bgs/cat-bg.jpg) no-repeat;
+    background: url(../../../assets/imgs/bgs/living-room-bg.jpg) no-repeat;
     /* 
         living-room-bg 
         background-color: rgb(0,0,0, 0.6);
@@ -18,7 +18,7 @@
 #authentication-section > div {
     color: #eee;
     width: 577px;
-    background: rgba(248, 248, 248, 0.1);
+    background: rgba(50,50,50, 0.6);
     position: relative;
     left: 200px;
     top: 5%;
@@ -28,7 +28,7 @@
 }
 #authentication-section > div::-webkit-scrollbar {
     width: 10px;
-    background-color: rgba(248, 248, 248, 0.1);
+    background-color: rgba(50,50,50, 0.6);
     border-radius: 10px;
 }
 #authentication-section > div::-webkit-scrollbar-thumb {
@@ -94,8 +94,7 @@ input::placeholder {
 .помошник {
     width: 70%;
     text-align: right;
-    margin: 0 auto;
-    margin-bottom: 15px;
+    margin: 15px auto;
 }
 .помошник * {
     cursor: pointer;
