@@ -3,11 +3,16 @@ import styles from './style.scss';
 
 export default function Navigation() {
     return (
-        <div className="main-navbar" style={styles}>
-            <h2>Nav</h2>
+        <main style={styles}>
+            <div className="main-navbar" style={styles}>
 
+                <div className="upper-nav">
 
-            <Outlet />
-        </div>
+                </div>
+
+                <Outlet />
+            </div>
+        </main>
+
     )
 }
