@@ -7,6 +7,7 @@ import profileVector from '../../assets/icons/profile-vector.png'
 import wishlistVector from '../../assets/icons/wishlist-vector.png'
 import cardVector from '../../assets/icons/card-vector.png'
 import searchVector from '../../assets/icons/search-vector.png'
+import Footer from './Footer'
 
 
 export default function Navigation() {
@@ -18,11 +19,11 @@ export default function Navigation() {
                         <div className="upper-left-nav">
                             <a href="mailto:alisherxujanov163@gmail.com">
                                 <img src={emailVector} width="15" height="15" alt="" />
-                                alisherxujanov163@gmail.com
+                                elmurodazodov777@gmail.com
                             </a>
                             <span>
                                 <img src={phoneVector} width="15" height="15" alt="" />
-                                (+99833) 4747477
+                                (+99833) 1106717
                             </span>
                         </div>
                         <div className="upper-right-nav">
@@ -104,6 +105,10 @@ export default function Navigation() {
                 </nav>
             </header>
             <Outlet />
+
+            <footer>
+                <Footer />
+            </footer>
         </div>
     )
 }
