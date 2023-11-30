@@ -20,7 +20,7 @@ function App() {
         </BrowserRouter>
       </div>
     </context.Provider>
-  );
+  );  
 }
 
 export default App;
