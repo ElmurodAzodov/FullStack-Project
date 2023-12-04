@@ -19,13 +19,13 @@ export default function Navigation() {
                 <nav className='main-navbar'>
                     <div className="upper-nav">
                         <div className="upper-left-nav">
-                            <a href="mailto:alisherxujanov163@gmail.com">
+                            <a href="mailto:elmurodazodov777@gmail.com">
                                 <img src={emailVector} width="15" height="15" alt="" />
-                                alisherxujanov163@gmail.com
+                                elmurodazodov777@gmail.com
                             </a>
                             <span>
                                 <img src={phoneVector} width="15" height="15" alt="" />
-                                (+99833) 4747477
+                                (+99833) 1106717
                             </span>
                         </div>
                         <div className="upper-right-nav">
@@ -45,15 +45,15 @@ export default function Navigation() {
                                 {
                                     isLoggedIn()
                                         ?
-                                            (<Link to={"/profile"}>
-                                                Profile
-                                                <img src={profileVector} alt="Vector" width={15} height={15} />
-                                            </Link>)
+                                        (<Link to={"/profile"}>
+                                            Profile
+                                            <img src={profileVector} alt="Vector" width={15} height={15} />
+                                        </Link>)
                                         :
-                                            (<Link to={"/auth"}>
-                                                Login
-                                                <img src={profileVector} alt="Vector" width={15} height={15} />
-                                            </Link>)
+                                        (<Link to={"/auth"}>
+                                            Login
+                                            <img src={profileVector} alt="Vector" width={15} height={15} />
+                                        </Link>)
                                 }
                             </span>
                             <span className='nav-link'>
