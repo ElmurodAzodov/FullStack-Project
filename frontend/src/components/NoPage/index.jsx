@@ -3,7 +3,7 @@ import NotFoundImage from '../../assets/imgs/404.png'
 import Brands from '../../assets/imgs/brands.png'
 
 const NoPage = () => {
-    const btnSize = { "width":'150px',  "height":'40px' }
+    const btnSize = { "width": '150px', "height": '40px' }
     return (
         <div style={styles}>
             <div className='no-page'>
@@ -11,8 +11,8 @@ const NoPage = () => {
                     <h1>404 Not Found</h1>
                     <p>Home.Pages. <span className='not-found-text'>404 Not Found</span></p>
                 </div>
-                <img 
-                    src={NotFoundImage} alt="Not Found" 
+                <img
+                    src={NotFoundImage} alt="Not Found"
                     width={600} height={500}
                 />
                 <a style={btnSize} className='danger-btn' href="/">
