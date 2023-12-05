@@ -27,6 +27,7 @@ function Login(props) {
         const data = await axiosCall('api/token/create/', user, null, "POST")
         if (data.response?.status === 401) {
             toast.error("Incorrect credentials", {toastId: 1})
+<<<<<<< HEAD
         } else {
             localStorage.clear()
             localStorage.setItem(ACCESS_TOKEN_KEY, data.access)
@@ -34,6 +35,14 @@ function Login(props) {
             toast.success("Successfully logged in", {toastId: 4})
             props.navigate('/')
         }
+=======
+        }
+        localStorage.clear()
+        localStorage.setItem(ACCESS_TOKEN_KEY, data.access)
+        localStorage.setItem(REFRESH_TOKEN_KEY, data.refresh)
+        toast.success("Successfully logged in", {toastId: 4})
+        props.navigate('/')
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
     };
 
     const PATTERN = /^[a-zA-Z0-9]+$/;

@@ -13,6 +13,14 @@ import { useNavigate } from 'react-router-dom'
 
 
 function Authentication(props) {
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (isLoggedIn()) {
+            navigate('/')
+        }
+    })
+
     let [registered, setRegistered] = useState(true);
     const navigate = useNavigate()
 

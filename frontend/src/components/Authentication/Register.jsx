@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import Eye from "../../assets/icons/Eye.png"
 import { useState } from "react"
 import { toast } from 'react-toastify'
 import { registerNewUser } from "../../conf/axios.js"
+=======
+import Eye from "../../assets/icons/Eye.png";
+import { useState } from "react";
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
 
 
 function Register(props) {
@@ -26,14 +31,24 @@ function Register(props) {
         } else {
             setError({ ...errors, usernameErr: '' })
         }
+<<<<<<< HEAD
         setUsername(val)
     }
+=======
+        setUsername(val) 
+    } 
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
     function fireSetPassword(e) {
         const val = e.target.value
         const inputName = e.target.name
 
+<<<<<<< HEAD
 
         let errName = inputName === "password" ? 'passwordErr' : 'password2Err'
+=======
+     
+        let errName = inputName === "password"  ?  'passwordErr' : 'password2Err'
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
 
         if (val.length !== 0) {
             if (!PATTERN.test(val)) {
@@ -45,8 +60,13 @@ function Register(props) {
             setError({ ...errors, [errName]: '' })
         }
 
+<<<<<<< HEAD
         inputName === "password" ? setPassword(val) : setPassword2(val)
     }
+=======
+        inputName === "password"  ?  setPassword(val) : setPassword2(val) 
+    } 
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
     function fireSetEmail(e) {
         e.preventDefault()
         // const emailPattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/
@@ -63,6 +83,7 @@ function Register(props) {
         setEmail(val)
     }
 
+<<<<<<< HEAD
     function handleSubmit(e) {
         e.preventDefault()
         if (password !== password2) {
@@ -83,21 +104,33 @@ function Register(props) {
             toast.error('Что то произошло не так, повторите попытку', { toastId: 10 })
         }
     }
+=======
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
 
     return (
         <div>
             <form className="auth-form" onSubmit={handleSubmit}>
                 <div>
+<<<<<<< HEAD
                     <input
                         type="text" id="register-name-input"
                         placeholder="Введите никнейм"
+=======
+                    <input 
+                        type="text" id="register-name-input" 
+                        placeholder="Введите никнейм" 
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
                         onChange={fireSetUsername}
                     />
                     <p className="error">
                         {errors.usernameErr}
                     </p>
 
+<<<<<<< HEAD
                     <input type="email" id="register-email-input" placeholder="Электронная почта"
+=======
+                    <input type="email" id="register-email-input" placeholder="Электронная почта" 
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
                         onChange={fireSetEmail}
                     />
                     <p className="error">
@@ -105,11 +138,19 @@ function Register(props) {
                     </p>
                 </div>
                 <div>
+<<<<<<< HEAD
                     <input
                         id="register-pass-input"
                         type={showPassword ? "text" : "password"}
                         className="pass-input"
                         placeholder="Придумайте пароль"
+=======
+                    <input 
+                        id="register-pass-input" 
+                        type={showPassword ? "text" : "password"} 
+                        className="pass-input" 
+                        placeholder="Придумайте пароль" 
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
                         name="password"
                         onChange={fireSetPassword}
                     />
@@ -119,10 +160,17 @@ function Register(props) {
                     </p>
                 </div>
                 <div>
+<<<<<<< HEAD
                     <input
                         id="pass2-input"
                         type="password"
                         placeholder="Повторите пароль"
+=======
+                    <input 
+                        id="pass2-input" 
+                        type="password" 
+                        placeholder="Повторите пароль" 
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
                         name="password2"
                         onChange={fireSetPassword}
                     />

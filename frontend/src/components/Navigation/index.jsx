@@ -19,7 +19,11 @@ export default function Navigation() {
                 <nav className='main-navbar'>
                     <div className="upper-nav">
                         <div className="upper-left-nav">
+<<<<<<< HEAD
                             <a href="mailto:azodovelmurod777@gmail.com">
+=======
+                            <a href="mailto:elmurodazodov777@gmail.com">
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
                                 <img src={emailVector} width="15" height="15" alt="" />
                                 azodovelmurod777@gmail.com
                             </a>
@@ -45,10 +49,17 @@ export default function Navigation() {
                                 {
                                     isLoggedIn()
                                         ?
+<<<<<<< HEAD
                                             (<Link to={"/profile"}>
                                                 Profile
                                                 <img src={profileVector} alt="Vector" width={15} height={15} />
                                             </Link>)
+=======
+                                        (<Link to={"/profile"}>
+                                            Profile
+                                            <img src={profileVector} alt="Vector" width={15} height={15} />
+                                        </Link>)
+>>>>>>> 9af6f5ec5b853f2639df7ebe8fdbccbe30076e8e
                                         :
                                             (<Link to={"/auth"}>
                                                 Login
